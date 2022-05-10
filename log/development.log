@@ -17760,3 +17760,256 @@ FOREIGN KEY ("author_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-05-10 19:37:23 +1000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /mnt/c/Users/might/Coder/projects/term2/rails/db_lesson/app/controllers/application_controller.rb:2)
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 5792)
+  Rendered layout layouts/application.html.erb (Duration: 187.9ms | Allocations: 30263)
+Completed 200 OK in 223ms (Views: 191.9ms | ActiveRecord: 1.7ms | Allocations: 36992)
+
+
+Started GET "/books/6" for ::1 at 2022-05-10 19:37:25 +1000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  Rendered books/show.html.erb within layouts/application (Duration: 39.6ms | Allocations: 10328)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 13115)
+Completed 200 OK in 58ms (Views: 46.2ms | ActiveRecord: 3.7ms | Allocations: 16491)
+
+
+Started GET "/books/6" for ::1 at 2022-05-10 19:37:28 +1000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  Rendered books/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1578)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4214)
+Completed 200 OK in 23ms (Views: 16.7ms | ActiveRecord: 1.1ms | Allocations: 5562)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/books/6" for ::1 at 2022-05-10 19:37:50 +1000
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: 'include Pundit' is deprecated. Please use 'include Pundit::Authorization' instead.
+ (called from include at /mnt/c/Users/might/Coder/projects/term2/rails/db_lesson/app/controllers/application_controller.rb:2)
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  Rendered books/show.html.erb within layouts/application (Duration: 32.8ms | Allocations: 10545)
+  Rendered layout layouts/application.html.erb (Duration: 119.4ms | Allocations: 35127)
+Completed 200 OK in 161ms (Views: 122.6ms | ActiveRecord: 3.5ms | Allocations: 48393)
+
+
+Started GET "/" for ::1 at 2022-05-10 19:37:51 +1000
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 4072)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.4ms | Allocations: 5044)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-10 19:37:54 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/camz/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/camz/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 35.9ms | Allocations: 733)
+  Rendered /home/camz/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 244.7ms | Allocations: 4945)
+  Rendered layout layouts/application.html.erb (Duration: 253.5ms | Allocations: 7789)
+Completed 200 OK in 279ms (Views: 256.6ms | ActiveRecord: 1.7ms | Allocations: 13389)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-10 19:38:03 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 248ms (ActiveRecord: 0.8ms | Allocations: 4812)
+
+
+Started GET "/" for ::1 at 2022-05-10 19:38:03 +1000
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:74:in `check_auth'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:20:in `create?'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:14
+  Rendered books/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 10518)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 13530)
+Completed 200 OK in 51ms (Views: 44.2ms | ActiveRecord: 3.4ms | Allocations: 15222)
+
+
+Started GET "/books/6" for ::1 at 2022-05-10 19:38:05 +1000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:74:in `check_auth'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  [1m[36mRole Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mCACHE Role Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:20:in `create?'
+  Rendered books/show.html.erb within layouts/application (Duration: 16.2ms | Allocations: 4349)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 7121)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 2.6ms | Allocations: 9159)
+
+
+Started GET "/books/6/edit" for ::1 at 2022-05-10 19:38:07 +1000
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" ORDER BY "authors"."last_name" ASC[0m
+  ↳ app/views/books/_form.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/_form.html.erb:18
+  Rendered books/_form.html.erb (Duration: 52.1ms | Allocations: 4070)
+  Rendered books/edit.html.erb within layouts/application (Duration: 61.8ms | Allocations: 4371)
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 7265)
+Completed 200 OK in 80ms (Views: 69.6ms | ActiveRecord: 1.9ms | Allocations: 10607)
+
+
+Started PATCH "/books/6" for ::1 at 2022-05-10 19:38:23 +1000
+Processing by BooksController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"I, Robot", "author_id"=>"3", "cover"=>#<ActionDispatch::Http::UploadedFile:0x00007fa8226f79b8 @tempfile=#<Tempfile:/tmp/RackMultipart20220510-9567-ltmv0e.jpg>, @original_filename="i-robot.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"book[cover]\"; filename=\"i-robot.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Book", "id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRole Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mActiveStorage::Blob Create (1.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "jk8pdulnldeirl8s4hmpcse8taz8"], ["filename", "i-robot.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "cloudinary"], ["byte_size", 48190], ["checksum", "SXgiGPZERtDFrsr11rWZ8w=="], ["created_at", "2022-05-10 09:38:23.442548"]]
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "cover"], ["record_type", "Book"], ["record_id", 6], ["blob_id", 1], ["created_at", "2022-05-10 09:38:23.448332"]]
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "updated_at" = ? WHERE "books"."id" = ?[0m  [["updated_at", "2022-05-10 09:38:23.451483"], ["id", 6]]
+  ↳ app/controllers/books_controller.rb:54:in `update'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:54:in `update'
+[36m  Cloudinary Storage (1971.5ms) [0m[32mUploaded file to key: jk8pdulnldeirl8s4hmpcse8taz8 (checksum: SXgiGPZERtDFrsr11rWZ8w==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 97492bc2-7184-4d52-baa3-7a274f15fd09) to Async(default) with arguments: #<GlobalID:0x00007fa822954e68 @uri=#<URI::GID gid://db-lesson/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/books/6
+Completed 302 Found in 2297ms (ActiveRecord: 12.5ms | Allocations: 175292)
+
+
+Started GET "/books/6" for ::1 at 2022-05-10 19:38:25 +1000
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09] Performing ActiveStorage::AnalyzeJob (Job ID: 97492bc2-7184-4d52-baa3-7a274f15fd09) from Async(default) enqueued at 2022-05-10T09:38:25Z with arguments: #<GlobalID:0x00007fa822825920 @uri=#<URI::GID gid://db-lesson/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09] [36m  Cloudinary Storage (0.5ms) [0m[34mGenerated URL for file at key: jk8pdulnldeirl8s4hmpcse8taz8 (http://res.cloudinary.com/champdogcode/image/upload/jk8pdulnldeirl8s4hmpcse8taz8.jpg)[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/books_controller.rb:74:in `check_auth'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:74:in `check_auth'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  [1m[36mRole Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mCACHE Role Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:20:in `create?'
+  Rendered books/show.html.erb within layouts/application (Duration: 19.1ms | Allocations: 6484)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 9408)
+Completed 200 OK in 43ms (Views: 25.7ms | ActiveRecord: 3.8ms | Allocations: 12135)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09] [36m  Cloudinary Storage (319.3ms) [0m[34mDownloaded file from key: jk8pdulnldeirl8s4hmpcse8taz8[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09]   [1m[36mActiveStorage::Blob Update (1.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09]   [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [97492bc2-7184-4d52-baa3-7a274f15fd09] Performed ActiveStorage::AnalyzeJob (Job ID: 97492bc2-7184-4d52-baa3-7a274f15fd09) from Async(default) in 372.42ms
+Started GET "/books/6" for ::1 at 2022-05-10 19:38:28 +1000
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:74:in `check_auth'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:79:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:2
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Book"], ["name", "cover"], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:9
+  [1m[36mRole Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mCACHE Role Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)) OR ((roles.name = 'editor') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:28:in `update?'
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = ? AND (((roles.name = 'admin') AND (roles.resource_type IS NULL) AND (roles.resource_id IS NULL)))[0m  [["user_id", 1]]
+  ↳ app/policies/book_policy.rb:20:in `create?'
+  Rendered books/show.html.erb within layouts/application (Duration: 18.2ms | Allocations: 5167)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 7937)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 2.7ms | Allocations: 9840)
+
+
