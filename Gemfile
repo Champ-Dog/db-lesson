@@ -84,3 +84,5 @@ gem "cloudinary", "~> 1.23"
 gem "activestorage-cloudinary-service", "~> 0.2.3"
 
 gem "pg", "~> 1.3", :group => :production
+
+gem "dotenv-rails", "~> 2.7"

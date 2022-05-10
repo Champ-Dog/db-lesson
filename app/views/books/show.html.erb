@@ -6,7 +6,7 @@
 <%# We can manually create alternate version of the image in Cloudinary, which will also then funciton as a list of functions we can perform on animage %>
 <%# If we do this is Cloudinary, it will also give us the code to do the same in our app, in various languages: Ruby, HTML, Python, Node.js, etc %>
 <%# Cloudinary will create and save the altered version of the image, rather than alter it each time it is accessed. Cloudinary ALSO creates thumbnails the the code to use them %>
-<%= (cl_image_tag @book.cover.key, crop: :scale, width: 150, cloud_name: "champdogcode") if @book.cover.attached? %>
+<%= (cl_image_tag @book.cover.key, crop: :scale, width: 150, cloud_name: ENV['CLOUDINARY_CLOUD_NAME']) if @book.cover.attached? %>
 
 <%# Wrapping this in the 'if' statement means anyone not logged in will not see the edit/delete buttons, as they can't access them anyway %>
 <% if policy(@book).edit_or_destroy? %>

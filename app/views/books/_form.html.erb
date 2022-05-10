@@ -1,5 +1,5 @@
 <%# Rails has it's own form generation magic, which is useful as we don't need to manually update our page if we change our Model %>
-<%= form_with(model: @book) do |f| %>
+<%= form_with(model: @book, data: {turbo: false}) do |f| %>
   <fieldset class="mb-2">
     <%= f.label :title %>
     <%= f.text_field :title %>

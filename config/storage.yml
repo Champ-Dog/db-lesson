@@ -10,9 +10,9 @@ local:
 # VERY IMPORTANT TO REMOVE api_secret BEFORE DEPLOYMENT AND PUSHING TO GITHUB!
 cloudinary:
   service: Cloudinary
-  cloud_name: champdogcode
-  api_key: 581554671471619
-  api_secret: 9NWgjbEDkRtxCYw3ISOPie6zJcs
+  cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME'] %>
+  api_key: <%= ENV['CLOUDINARY_API_KEY'] %>
+  api_secret: <%= ENV['CLOUDINARY_SECRET'] %>
 
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:

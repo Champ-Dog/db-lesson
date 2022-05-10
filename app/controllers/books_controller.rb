@@ -11,7 +11,8 @@ class BooksController < ApplicationController
   # to select an individual book. We use the 'only' modifier to do this. OR 'except: [:index, :create, :new]'
   before_action :set_book, only: [:show, :update, :destroy, :edit]
   before_action :set_authors, only: [:new, :edit, :create, :update]
-  # We initially set 'index' to render so that we could focus on setting up the Controller in isolation to the View
+  
+   # We initially set 'index' to render so that we could focus on setting up the Controller in isolation to the View
   def index
     @books = Book.all
   end
@@ -45,7 +46,7 @@ class BooksController < ApplicationController
     end
   end
 
-  def edit
+  def edit 
   end
 
   def update
