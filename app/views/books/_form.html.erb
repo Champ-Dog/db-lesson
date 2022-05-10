@@ -1,0 +1,30 @@
+<%# Rails has it's own form generation magic, which is useful as we don't need to manually update our page if we change our Model %>
+<%= form_with(model: @book) do |f| %>
+  <fieldset class="mb-2">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </fieldset>
+  <fieldset class="mb-2">
+ <%= f.label :author_id %>
+    <%
+        # collection_select takes 4 params:
+        #   1. The attribute name in this model (book) to store the selected id in
+        #   2. The collection from which to build the options
+        #   3. The attribute in the collection items to use as the value of the option
+        #   4. The attribute in the collection items to use as the caption of the option
+    %>
+    <%= f.collection_select :author_id, @authors, :id, :full_name %>
+  </fieldset>
+  <% if @book.cover.attached? %>
+    <fieldset class="mb-2">
+      <%= cl_image_tag @book.cover.key, transformation: ["media_lib_thumb"] , cloud_name: "champdogcode" %>      
+    </fieldset>
+  <% end %>
+  <fieldset class="mb-2">
+    <%= f.label :cover %>
+    <%= f.file_field :cover %>
+  </fieldset>
+  <fieldset>
+    <%= f.submit class: 'btn btn-outline-primary' %>    
+  </fieldset>
+<% end %> 
